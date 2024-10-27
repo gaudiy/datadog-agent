@@ -22,6 +22,7 @@ const (
 	// Info is composed of the type and binding of the symbol. Type is the lower 4 bits and binding is the upper 4 bits.
 	// We are only interested in functions, which binding STB_GLOBAL (1) and type STT_FUNC (2).
 	// Hence, we are interested in symbols with Info 18.
+	// nolint: unused
 	infoFunction = byte(elf.STB_GLOBAL)<<4 | byte(elf.STT_FUNC)
 )
 
