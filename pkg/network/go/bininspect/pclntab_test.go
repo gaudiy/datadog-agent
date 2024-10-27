@@ -28,6 +28,7 @@ const (
 
 // TestGetPCLNTABSymbolParser tests the GetPCLNTABSymbolParser function with strings set symbol filter.
 // We are looking to find all symbols of the current process executable and check if they are found in the PCLNTAB.
+// nolint: unused
 func testGetPCLNTABSymbolParser(t *testing.T) {
 	currentPid := os.Getpid()
 	f, err := elf.Open("/proc/" + strconv.Itoa(currentPid) + "/exe")
